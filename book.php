@@ -9,7 +9,8 @@
 <body>
     <!-- user tools -->
     <aside id="user_tools">
-        <form action="fill_edit_user_book.php" method="POST">
+        <h1>Create book</h1>
+        <form action="fill_edit_user_book.php" method="POST" class="form_book">
             <table>
                 <tr>
                     <td>
@@ -19,7 +20,7 @@
                         :
                     </td>
                     <td>
-                        <input type="text" name="title" required>
+                        <input type="text" name="title" required class="book_input">
                     </td>
                 </tr>
                 <tr>
@@ -30,15 +31,15 @@
                         :
                     </td>
                     <td>
-                        <input type="text" name="content">
+                        <input type="text" name="content" class="book_input">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>
-                        <button type="submit">Submit</button>
-                        <button type="reset">reset</button>
+                        <button type="submit" class="toggle-btn">Submit</button>
+                        <button type="reset" class="toggle-btn">reset</button>
                     </td>
                 </tr>
             </table>

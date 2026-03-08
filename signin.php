@@ -17,8 +17,12 @@ if (!$stmt->execute([$username, $password, $email, $phone_numb])) {
     $error = $stmt->error;
     die("Error query: " . $error );
 }
-header('location: book.php');
+
+// get user id
+$id = $conn->insert_id;
+header('location: book.php?id=' . urlencode($id));
 
 // close
 $conn = null;
+exit();
 ?>
