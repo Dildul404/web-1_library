@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* variabel */
+:root {
+    --teracota: #d06224;
+    --chile-rojo: #ae431e;
+    --olive: #8a8635;
+    --sunset: #eac891;
+    --black: #111a10;
+    --white: #dcd7c9;
+    --indigo-rain: #0d244d;
+}
+
+/* display */
+.none {
+    display: none;
+}
+
+/* Body */
+body {
+    background-color: var(--teracota);   
+}
+.body-overlay {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* signin & login card */
+.login-container {
+    background-color: var(--olive);
+    color: var(--white);
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px var(--black);
+}
+.toggle-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 5px 3px;
+    width: 70px;
+    background-color: var(--sunset);
+    color: var(--black);
+    font-weight: bold;
+}
+.input-box {
+    background-color: var(--olive);
+    border: none;
+    border-bottom: 1px solid var(--sunset);
+    color: var(--white);
+}
+#card_toggle {
+    cursor: pointer;
+    color: var(--indigo-rain);
+}
+
+/* Book */
+#user_tools {
+    width: 250px;
+    padding-top: 100px;
+    background-color: var(--chile-rojo);
+    height: 100vh;
+    
+}
