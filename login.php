@@ -18,8 +18,7 @@ if ($res->num_rows > 0) {
     $user = $res->fetch_assoc();
 
     if (password_verify($password, $user['password'])) {
-        echo "<br> Login berhasil";
-        echo "<br> email :" . $user['email'];
+        header("location: book.php?id=" . urlencode($user['user_id']));
     } else {
         echo "Password salah";
     }
@@ -30,6 +29,5 @@ if ($res->num_rows > 0) {
 
 // close
 $conn = null;
-
-header("location: book.php");
+exit();
 ?>

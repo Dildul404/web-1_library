@@ -11,6 +11,9 @@
     <aside id="user_tools">
         <h1>Create book</h1>
         <form action="fill_edit_user_book.php" method="POST" class="form_book">
+            <!-- user id -->
+             <?php $user_id = $_GET['id'] ?>
+            <input type="hidden" name="user_id" value="<?= $user_id; ?>">
             <table>
                 <tr>
                     <td>
