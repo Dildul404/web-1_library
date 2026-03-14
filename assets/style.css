@@ -14,6 +14,7 @@
     --white: #dcd7c9;
     --indigo-rain: #0d244d;
     --orange: #ec5e27;
+    --crumpet: #f5e2ce;
 }
 
 /* display */
@@ -69,7 +70,11 @@ body {
     color: var(--indigo-rain);
 }
 
-/* Book */
+/* body book page */
+.book_body_container {
+    display: flex;
+}
+/* Book input*/
 #user_tools {
     width: 270px;
     padding-top: 100px;
@@ -88,4 +93,12 @@ body {
     border: none;
     border-bottom:1px solid var(--white);
     padding: 2px;
+}
+
+/* Book container & it's content */
+.book_container {
+    width: 450px;
+    margin: auto;
+    height: 670px;
+    background-color: var(--crumpet);
 }

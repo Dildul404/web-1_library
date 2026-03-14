@@ -19,6 +19,7 @@ if(!$stmt->execute([$user_id, $title, $content])) {
     die("Query  error :" . $stmt->error);
 }
 
+// 
 $conn->close();
 header("location: book.php?id=" . urlencode($user_id));
 exit();
