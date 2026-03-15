@@ -48,6 +48,10 @@
                     </tr>
                 </table>
             </form>
+            <form action="del_user_book.php" method="post">
+                <input type="text" name="user_id" value="<?= $user_id; ?>" hidden>
+                <button class="toggle-btn max-width">Clear Book</button>
+            </form>
         </aside>
         <!-- Book -->
         <div class="book_container" id="book_container">
@@ -60,6 +64,8 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const user_id = params.get("id");
+        const title = document.getElementById('title');
+        const content = document.getElementById('content');
 
         fetch("showBooks.php", {
             method: "POST",
@@ -67,6 +73,14 @@
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: "user_id=" + user_id
+        })
+        .then(res => res.json())
+        .then(data => {
+            title.innerText = data.title;
+            content.innerText = data.content;
+        })
+        .catch(err => {
+            console.error(err);
         });
     </script>
 </body>

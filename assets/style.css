@@ -94,6 +94,9 @@ body {
     border-bottom:1px solid var(--white);
     padding: 2px;
 }
+.max-width {
+    width: 263px;
+}
 
 /* Book container & it's content */
 .book_container {
